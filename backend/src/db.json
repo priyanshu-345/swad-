@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "id": "XxPvksP1xymclOcVWe2Or",
+      "name": "pranshu",
+      "email": "pranshu9@gmail.com",
+      "passwordHash": "$2a$10$FbwHiTDx5Rchrsr1SFTJhOrFXsq0kjro9Q/iDZPfnuEeIOGJ2w7le"
+    },
+    {
+      "id": "SYFj8GVTtYafXcDEz4-Du",
+      "name": "pranshu shukla",
+      "email": "admin@gmail.com",
+      "passwordHash": "$2a$10$zHgpuU/r2RIi8aKY5WkR4emfylnI1l2lxwh/wIeCczN38sl1pTOkW"
+    }
+  ]
+}

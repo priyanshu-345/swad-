@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Swad Slice - About Us</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="top-bar">
+        <div class="top-bar-inner">
+          <div class="brand-area">
+            <a href="index.html" style="display: flex; align-items: center; gap: 0.6rem; text-decoration: none; color: inherit;">
+              <img
+                src="/assets/images/logo-original.png"
+                alt="Logo"
+                class="brand-logo"
+              />
+              <span class="brand-text">Swad Slice</span>
+            </a>
+          </div>
+          <button class="nav-toggle" id="navToggle">
+            <span class="nav-line"></span>
+            <span class="nav-line"></span>
+            <span class="nav-line"></span>
+          </button>
+          <nav class="main-nav main-nav-closed" id="mainNav">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="menu.html" class="nav-link">Menu</a>
+            <a href="order.html" class="nav-link">Order Now</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+            <a href="login.html" class="nav-link">Login</a>
+            <a href="register.html" class="nav-link">Register</a>
+            <a href="profile.html" class="nav-link">Profile</a>
+          </nav>
+          <button class="cart-btn" id="cartBtn">
+            <span class="cart-icon">🛒</span>
+            <span class="cart-count" id="cartCount">0</span>
+          </button>
+        </div>
+      </header>
+
+      <!-- CART SIDEBAR -->
+      <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+          <h2 class="cart-title">Your Cart</h2>
+          <button class="cart-close" id="cartClose">×</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+          <p class="cart-empty">Your cart is empty</p>
+        </div>
+        <div class="cart-footer">
+          <div class="cart-total">
+            <span class="total-label">Total:</span>
+            <span class="total-amount" id="cartTotal">$0.00</span>
+          </div>
+          <button class="checkout-btn" id="checkoutBtn">Checkout</button>
+        </div>
+      </div>
+      <div class="cart-overlay" id="cartOverlay"></div>
+
+      <main class="page-area">
+        <!-- ABOUT SECTION -->
+        <section class="content-section about-section" id="about" style="padding-top: 100px;">
+          <div class="section-container">
+            <h2 class="section-title-large">More About Us</h2>
+            <p class="section-intro">
+              Get to know our team, our values, and our commitment to quality. We are passionate about creating the perfect pizza experience for every customer.
+            </p>
+
+            <!-- Story Section -->
+            <div class="content-block" style="margin-bottom: 4rem;">
+              <div class="content-text">
+                <h3 class="content-heading">Our Journey</h3>
+                <p class="content-paragraph">
+                  Since 2020, Pizza Time has been serving authentic Italian cuisine with a modern twist. What started as a small family restaurant has grown into a beloved community favorite, known for our commitment to quality and exceptional service.
+                </p>
+                <p class="content-paragraph">
+                  Every day, we wake up early to prepare fresh dough, make our signature sauces from scratch, and select the finest ingredients. Our passion for pizza making drives us to continuously improve and innovate while staying true to traditional Italian techniques.
+                </p>
+              </div>
+              <div class="about-image-box">
+                <img
+                  src="/assets/images/about/img-one.jpeg"
+                  alt="Our Restaurant"
+                  class="about-featured-img"
+                />
+              </div>
+            </div>
+
+            <!-- Values Section -->
+            <div class="about-values-grid">
+              <div class="value-card">
+                <div class="value-icon">🎯</div>
+                <h4 class="value-title">Our Mission</h4>
+                <p class="value-text">
+                  To serve the most delicious, authentic Italian pizza using only the freshest ingredients and traditional cooking methods.
+                </p>
+              </div>
+              <div class="value-card">
+                <div class="value-icon">⭐</div>
+                <h4 class="value-title">Quality First</h4>
+                <p class="value-text">
+                  We never compromise on quality. Every ingredient is carefully selected, and every pizza is made with attention to detail.
+                </p>
+              </div>
+              <div class="value-card">
+                <div class="value-icon">🤝</div>
+                <h4 class="value-title">Community</h4>
+                <p class="value-text">
+                  We believe in building strong relationships with our customers and supporting our local community through every slice.
+                </p>
+              </div>
+            </div>
+
+            <!-- Gallery Section -->
+            <div class="gallery-section">
+              <h3 class="gallery-title">Our Gallery</h3>
+              <p class="gallery-intro" style="text-align: center; margin-bottom: 2rem; opacity: 0.8;">
+                Take a look at our restaurant, kitchen, and the amazing team that makes it all possible.
+              </p>
+              <div class="gallery-grid-compact">
+                <div class="gallery-item">
+                  <img
+                    src="/assets/images/about/section-one.jpeg"
+                    alt="Kitchen"
+                    class="gallery-img-compact"
+                  />
+                  <p class="gallery-caption">Our Wood-Fired Kitchen</p>
+                </div>
+                <div class="gallery-item">
+                  <img
+                    src="/assets/images/about/section-two.jpeg"
+                    alt="Restaurant"
+                    class="gallery-img-compact"
+                  />
+                  <p class="gallery-caption">Cozy Dining Area</p>
+                </div>
+                <div class="gallery-item">
+                  <img
+                    src="/assets/images/about/section-three.jpeg"
+                    alt="Chef"
+                    class="gallery-img-compact"
+                  />
+                  <p class="gallery-caption">Expert Chefs at Work</p>
+                </div>
+                <div class="gallery-item">
+                  <img
+                    src="/assets/images/about/office-1.jpeg"
+                    alt="Office"
+                    class="gallery-img-compact"
+                  />
+                  <p class="gallery-caption">Our Team</p>
+                </div>
+                <div class="gallery-item">
+                  <img
+                    src="/assets/images/about/office-2.jpeg"
+                    alt="Office"
+                    class="gallery-img-compact"
+                  />
+                  <p class="gallery-caption">Behind the Scenes</p>
+                </div>
+                <div class="gallery-item">
+                  <img
+                    src="/assets/images/about/img-four.jpeg"
+                    alt="Restaurant"
+                    class="gallery-img-compact"
+                  />
+                  <p class="gallery-caption">Fresh Ingredients</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- FULL FOOTER -->
+      <footer class="page-footer-full">
+        <div class="footer-container">
+          <div class="footer-grid">
+            <div class="footer-col">
+              <div class="footer-brand">
+                <img
+                  src="/assets/images/logo-original.png"
+                  alt="Logo"
+                  class="footer-logo"
+                />
+                <h3 class="footer-brand-name">Pizza Time</h3>
+              </div>
+              <p class="footer-description">
+                Serving the finest Italian cuisine with authentic flavors and
+                fresh ingredients. Order online or visit us today!
+              </p>
+              <div class="footer-social">
+                <a href="#" class="social-link">Facebook</a>
+                <a href="#" class="social-link">Instagram</a>
+                <a href="#" class="social-link">Twitter</a>
+                <a href="#" class="social-link">YouTube</a>
+              </div>
+            </div>
+
+            <div class="footer-col">
+              <h4 class="footer-heading">Quick Links</h4>
+              <ul class="footer-links">
+                <li><a href="index.html" class="footer-link">Home</a></li>
+                <li><a href="about.html" class="footer-link">About Us</a></li>
+                <li><a href="order.html" class="footer-link">Order Now</a></li>
+                <li><a href="menu.html" class="footer-link">Our Menu</a></li>
+                <li><a href="contact.html" class="footer-link">Contact</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-col">
+              <h4 class="footer-heading">Customer Service</h4>
+              <ul class="footer-links">
+                <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+                <li><a href="#" class="footer-link">FAQ</a></li>
+                <li><a href="#" class="footer-link">Delivery Info</a></li>
+                <li><a href="#" class="footer-link">Returns</a></li>
+                <li><a href="#" class="footer-link">Privacy Policy</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-col">
+              <h4 class="footer-heading">Contact Info</h4>
+              <ul class="footer-contact">
+                <li class="footer-contact-item">
+                  <span class="contact-icon">📍</span>
+                  <span>123 Pizza Street, Food City, FC 12345</span>
+                </li>
+                <li class="footer-contact-item">
+                  <span class="contact-icon">📞</span>
+                  <span>(555) 123-4567</span>
+                </li>
+                <li class="footer-contact-item">
+                  <span class="contact-icon">✉️</span>
+                  <span>info@pizzatime.com</span>
+                </li>
+                <li class="footer-contact-item">
+                  <span class="contact-icon">🕐</span>
+                  <span>Mon-Fri: 11am-10pm, Sat-Sun: 12pm-11pm</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer-bottom">
+            <p class="footer-copyright">
+              © 2024 Pizza Time. All rights reserved.
+            </p>
+            <div class="footer-legal">
+              <a href="#" class="footer-legal-link">Terms of Service</a>
+              <span class="footer-separator">|</span>
+              <a href="#" class="footer-legal-link">Privacy Policy</a>
+              <span class="footer-separator">|</span>
+              <a href="#" class="footer-legal-link">Cookie Policy</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Toast Notification Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="/js/app.js"></script>
+  </body>
+</html>
+
