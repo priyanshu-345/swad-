@@ -16,6 +16,15 @@ const app = express();
 const PORT = process.env.PORT || 4000;
 const JWT_SECRET = process.env.JWT_SECRET || "dev-secret-key-change-me";
 
+// Allow configuring frontend origin via env for deployment.
+// In Render single-service setup, frontend is served by this backend,
+// so we default to "*" in production and localhost in development.
+const FRONTEND_ORIGIN =
+  process.env.FRONTEND_ORIGIN ||
+  (process.env.NODE_ENV === "production"
+    ? "*"
+    : "http://localhost:5173");
+
 // DB setup (JSON file)
 const dbFile = path.join(__dirname, "db.json");
 const adapter = new JSONFile(dbFile);
@@ -25,7 +34,7 @@ db.data ||= { users: [] };
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: FRONTEND_ORIGIN,
     credentials: true,
   })
 );
@@ -150,8 +159,20 @@ app.get("/api/health", (req, res) => {
   res.json({ status: "ok" });
 });
 
+// In production, serve the built frontend from ../frontend/dist
+if (process.env.NODE_ENV === "production") {
+  const distPath = path.join(__dirname, "..", "..", "frontend", "dist");
+  app.use(express.static(distPath));
+
+  // For any non-API route, send index.html (supports direct URL hits)
+  app.get("*", (req, res) => {
+    if (req.path.startsWith("/api/")) return res.status(404).end();
+    res.sendFile(path.join(distPath, "index.html"));
+  });
+}
+
 app.listen(PORT, () => {
-  console.log(`Backend listening on http://localhost:${PORT}`);
+  console.log(`Backend listening on port ${PORT}`);
 });
 
 
