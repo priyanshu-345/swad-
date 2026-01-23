@@ -7,28 +7,52 @@ Simple fullstack pizza website with:
 - Fully responsive pages (home, menu, auth, profile)
 - Uses all existing images and videos from the original project
 
-## Run locally
+## 🚀 Running Commands
 
-From the project root directory (`swad slice`):
+### Step 1: Navigate to Project Directory
 
-```bash
-# Install root dependencies
+```powershell
+cd "C:\Users\hp\Desktop\Glimmer\swad slice\swad slice"
+```
+
+### Step 2: Install Dependencies (First Time Only)
+
+```powershell
 npm install
-
-# Install frontend and backend dependencies
 npm run install:all
+```
 
-# Run both frontend and backend
+### Step 3: Run Project
+
+```powershell
 npm run dev
 ```
 
+**Access URLs:**
 - **Frontend**: `http://localhost:5173`
 - **Backend**: `http://localhost:4000`
 
-## Alternative Commands
+### Alternative Commands
 
-- Run backend only: `npm run dev:backend`
-- Run frontend only: `npm run dev:frontend`
+**Run backend only:**
+```powershell
+npm run dev:backend
+```
+
+**Run frontend only:**
+```powershell
+npm run dev:frontend
+```
+
+**Build for production:**
+```powershell
+npm run build
+```
+
+**Start production server:**
+```powershell
+npm run start
+```
 
 ## Tech Stack
 
