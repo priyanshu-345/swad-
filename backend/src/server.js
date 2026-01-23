@@ -17,12 +17,10 @@ const PORT = process.env.PORT || 4000;
 const JWT_SECRET = process.env.JWT_SECRET || "dev-secret-key-change-me";
 
 // Allow configuring frontend origin via env for deployment.
-// In Render single-service setup, frontend is served by this backend,
-// so we default to "*" in production and localhost in development.
-const FRONTEND_ORIGIN =
-  process.env.FRONTEND_ORIGIN ||
-  (process.env.NODE_ENV === "production"
-    ? "*"
+// Supports multiple origins (comma-separated) or "*" for all origins
+const FRONTEND_ORIGIN = process.env.FRONTEND_ORIGIN || 
+  (process.env.NODE_ENV === "production" 
+    ? "*" // Allow all origins in production (can be restricted to specific Netlify URL)
     : "http://localhost:5173");
 
 // DB setup (JSON file)

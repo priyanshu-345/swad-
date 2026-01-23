@@ -2,9 +2,14 @@
   command = "cd frontend && npm install && npm run build"
   publish = "frontend/dist"
 
+# Environment variables - Set VITE_API_BASE_URL in Netlify dashboard
+# Example: VITE_API_BASE_URL = "https://swad-backend.onrender.com"
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+
+
 
 

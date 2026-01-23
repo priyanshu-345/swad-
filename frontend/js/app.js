@@ -261,13 +261,16 @@ document.addEventListener("DOMContentLoaded", function() {
   const contactForm = document.getElementById("contactForm");
   const contactMessage = document.getElementById("contactMessage");
 
+  // Get API base URL from config (set via environment variable)
+  const API_BASE = window.API_BASE_URL || '';
+
   async function fetchProfile() {
     if (!profileStatus || !profileForm) return;
     profileStatus.textContent = "Loading profile...";
     profileForm.style.display = "none";
     const notLoggedIn = document.getElementById("notLoggedIn");
     try {
-      const res = await fetch("/api/profile", {
+      const res = await fetch(`${API_BASE}/api/profile`, {
         credentials: "include",
       });
       if (!res.ok) {
@@ -304,7 +307,7 @@ document.addEventListener("DOMContentLoaded", function() {
         password: formData.get("password"),
       };
       try {
-        const res = await fetch("/api/auth/login", {
+        const res = await fetch(`${API_BASE}/api/auth/login`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           credentials: "include",
@@ -343,7 +346,7 @@ document.addEventListener("DOMContentLoaded", function() {
         password: formData.get("password"),
       };
       try {
-        const res = await fetch("/api/auth/register", {
+        const res = await fetch(`${API_BASE}/api/auth/register`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           credentials: "include",
@@ -377,7 +380,7 @@ document.addEventListener("DOMContentLoaded", function() {
       }
       const body = { name: profileName ? profileName.value : "" };
       try {
-        const res = await fetch("/api/profile", {
+        const res = await fetch(`${API_BASE}/api/profile`, {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
           credentials: "include",
@@ -403,7 +406,7 @@ document.addEventListener("DOMContentLoaded", function() {
   if (logoutBtn) {
     logoutBtn.addEventListener("click", async () => {
       try {
-        await fetch("/api/auth/logout", {
+        await fetch(`${API_BASE}/api/auth/logout`, {
           method: "POST",
           credentials: "include",
         });
